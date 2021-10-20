@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="shortcut icon" href="imagen/favicon.ico" alt="chocolates_buen_dia">
+  <img src="imagen/LOGO_SIN_FONDO.png" style="width: 200px;height: 200px;">
+  <title>Formulario Inicio de Sesión</title>
+  <script src="js/form2.js"></script>
+  <script src="js/registro.js"></script>
+  <!-- <script src="js/inicioSesion.js"></script> -->
+  <script type="text/javascript">
+      function sesion(){
+        var form = document.form;
+        var user = form.campUser.value;
+        var email = form.campEmail.value;
+        var pass = form.campPass.value;
+
+        if(user=="chocolatero" && email=="chocolatero@gmail.com" && pass=="chocolatero123"){
+          window.alert("Bienvenido al sistema");
+          window.location.href=('bdsqlcontrol.html');
+        } else{
+          alert("Datos incorrectos, por favor vuelva a intentarlo");
+        }
+      }
+  
+  </script>
+  <script>
+    function limpiarFormulario() {
+      document.getElementById("miForm").reset();
+    }
+  </script>
+
+</head>
+<body>
+  <form id="miForm" name="form" action="#" method="POST">
+    <section class="form-register">
+      <h4>Inicio de Sesión de Empleados</h4>
+      <input class="controls" type="text" name="campUser" id="campoUsuario" placeholder="Ingrese su nombre de usuario"/>
+      <input class="controls" type="email" name="campEmail" id="campoEmail" placeholder="Ingrese su correo"/>
+      <input class="controls" type="password" name="campPass" id="campoPass" placeholder="Ingrese su contraseña"/>
+      
+      <!-- <input class="controls btn btn-lg btn-primary btn-block" type="submit" value="Iniciar Sesion" onclick="sesion(); inicioSesion();"> -->
+    </section>
+  </form>
+</body>
+
+
+<footer>
+  <div id="boton_loguin">
+    <button class="button button1" onclick="sesion(); limpiarFormulario();">Iniciar Sesión</button>
+  </div> 
+</footer>
+
+
+
+<footer>
+  <div id="boton_regresar">
+    <h2><form action="index.html">
+    <input type="submit" value="Home page"/></h2>      
+    </form>
+  </div> 
+</footer>
+</html>
